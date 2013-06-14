@@ -1,4 +1,3 @@
-// ConsoleApplication2.cpp : 定义控制台应用程序的入口点。
 #include "stdafx.h"
 #include<iostream>
 #include<cassert>
@@ -23,19 +22,19 @@ public:
 	void setprior(Dnode<Telem> *p) {prior = p;}
 };
 
-//基类模板，可在此基础上实现顺序表，链表
+
 template<class Telem>
 class List
 {
 public:
-	virtual void clear() = 0;                       //清空
-	virtual int leng() = 0;						    //求长度
-	virtual Telem gete(int loc) = 0;				//返回第 i 个元素
-	virtual int loct(Telem &val) = 0;               //查找，若找到返回元素的序号，否则返回0
-	virtual bool inst(int loc,Telem &val) = 0;      //将val插入到loc位置中
-	virtual Telem dele(int loc) = 0;                //删除loc位置中的数据元素
-	virtual bool full() = 0;                        //判断是否为满
-	virtual bool empt() = 0;                        //判断是否为空
+	virtual void clear() = 0;                       
+	virtual int leng() = 0;					
+	virtual Telem gete(int loc) = 0;			
+	virtual int loct(Telem &val) = 0;               
+	virtual bool inst(int loc,Telem &val) = 0;      
+	virtual Telem dele(int loc) = 0;               
+	virtual bool full() = 0;                       
+	virtual bool empt() = 0;                        
 };
 
 template<class Telem>
